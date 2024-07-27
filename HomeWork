@@ -1,0 +1,56 @@
+Last login: Sat Jul 27 14:46:27 on ttys003
+aset@MacBook-Pro-107916 ~ % pwd
+/Users/aset
+aset@MacBook-Pro-107916 ~ % mkdir MyDirectory
+mkdir: MyDirectory: File exists
+aset@MacBook-Pro-107916 ~ % mkdir MyDirectory1
+aset@MacBook-Pro-107916 ~ % cd MyDirectory1
+aset@MacBook-Pro-107916 MyDirectory1 % touch MyFile.txt
+aset@MacBook-Pro-107916 MyDirectory1 % ls -l
+total 0
+-rw-r--r--  1 aset  staff  0 27 июл 15:49 MyFile.txt
+aset@MacBook-Pro-107916 MyDirectory1 % cp /Users/aset/MyDirectory1/*.txt /Users/aset/MyDirectory
+aset@MacBook-Pro-107916 MyDirectory1 % cd /Users/aset/MyDirectory/
+aset@MacBook-Pro-107916 MyDirectory % ls -l
+total 0
+-rw-r--r--  1 aset  staff  0 27 июл 15:51 MyFile.txt
+aset@MacBook-Pro-107916 MyDirectory % grep -rl "key_words"
+aset@MacBook-Pro-107916 MyDirectory % tar -cvf archive.tar MyFile.txt
+a MyFile.txt
+aset@MacBook-Pro-107916 MyDirectory % tar -xvf archive.tar
+x MyFile.txt
+aset@MacBook-Pro-107916 MyDirectory % nano MyFile.txt 
+aset@MacBook-Pro-107916 MyDirectory % awk '{print NR "\t" $0}' MyFile.txt | sort -nr | cut -f2-
+
+
+text3
+text2
+text1
+aset@MacBook-Pro-107916 MyDirectory % crontab -e
+crontab: no crontab for aset - using an empty one
+crontab: no changes made to crontab
+aset@MacBook-Pro-107916 MyDirectory % crontab -e
+crontab: no crontab for aset - using an empty one
+crontab: installing new crontab
+aset@MacBook-Pro-107916 MyDirectory % #0 2 * * 0 tar -czf /Users/aset/backup_$(date +\%Y-\%m-\%d).tar.gz /Users/aset/MyDirectory 
+zsh: command not found: #0
+aset@MacBook-Pro-107916 MyDirectory % ls -l 
+total 16
+-rw-r--r--  1 aset  staff    19 27 июл 16:03 MyFile.txt
+-rw-r--r--  1 aset  staff  1536 27 июл 16:01 archive.tar
+aset@MacBook-Pro-107916 MyDirectory % wc -w MyFile.txt
+       3 MyFile.txt
+aset@MacBook-Pro-107916 MyDirectory % pwgen -s 12 10 > MyFile.txt
+zsh: command not found: pwgen
+aset@MacBook-Pro-107916 MyDirectory % openssl rand -base64 12 | head -c 12 > MyFile.txt    
+aset@MacBook-Pro-107916 MyDirectory % sudo apt update && sudo apt upgrade -y
+Password:
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+aset@MacBook-Pro-107916 MyDirectory % 
+
+
+
+
+
